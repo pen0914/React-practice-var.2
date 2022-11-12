@@ -7,7 +7,7 @@ const style = {
 };
 
 export const ChildArea = memo((props) => {
-  const { open } = props;
+  const { opeN, onClickClosE } = props;
 
   const data = [...Array(20).keys()];
   data.forEach(() => {
@@ -16,9 +16,10 @@ export const ChildArea = memo((props) => {
 
   return (
     <>
-      {open ? (
+      {opeN ? (
         <div style={style}>
           <p>子コンポーネント</p>
+          <button onClick={onClickClosE}>閉じる</button>
         </div>
       ) : null}
     </>
